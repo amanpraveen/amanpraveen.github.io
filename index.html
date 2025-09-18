@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Your Name — projects, skills, and contact." />
+  <meta property="og:title" content="Your Name — Portfolio" />
+  <meta property="og:description" content="Projects, skills, and contact." />
+  <meta property="og:type" content="website" />
+  <meta name="color-scheme" content="light dark">
+  <style>
+    :root{
+      --bg: #0b0d10;
+      --card: #12161b;
+      --text: #e6edf3;
+      --muted:#9aa4af;
+      --accent:#3b82f6;
+      --accent-2:#22c55e;
+      --border:#2a3139;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#ffffff; --card:#f6f8fa; --text:#0b1220; --muted:#475569; --border:#e5e7eb; }
+    }
+    * { box-sizing: border-box }
+    html{ scroll-behavior: smooth }
+    body{ margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; color:var(--text); background:var(--bg); }
+    a{ color:var(--accent); text-decoration: none }
+    a:hover{ text-decoration: underline }
+    .container{ width:min(1100px, 92%); margin-inline:auto }
+    header{ position:sticky; top:0; backdrop-filter:saturate(180%) blur(6px); background:color-mix(in oklab, var(--bg) 80%, transparent); border-bottom:1px solid var(--border) }
+    .nav{ display:flex; align-items:center; justify-content:space-between; padding: .8rem 0 }
+    .nav a.brand{ font-weight:700; letter-spacing:.3px; color:var(--text) }
+    .nav ul{ list-style:none; display:flex; gap:1rem; margin:0; padding:0 }
+    .btn{ display:inline-block; padding:.6rem .95rem; border-radius:.7rem; background:var(--accent); color:white; border:1px solid color-mix(in oklab, var(--accent) 75%, black 25%); box-shadow:var(--shadow); text-decoration:none }
+    .btn.secondary{ background:transparent; color:var(--text); border:1px solid var(--border); box-shadow:none }
+    .btn:hover{ transform: translateY(-1px); transition: .2s }
+    .hero{ padding: 6rem 0 3rem; display:grid; gap:1.2rem }
+    .hero h1{ font-size: clamp(2rem, 5vw, 3.2rem); line-height:1.15; margin:.2rem 0 }
+    .hero p{ color:var(--muted); max-width:60ch }
+    .hero .cta{ display:flex; gap:.8rem; flex-wrap:wrap; margin-top:.5rem }
+    section{ padding: 3rem 0 }
+    .section-title{ font-size:1.4rem; margin:0 0 1rem; letter-spacing:.3px }
+    .grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1rem }
+    .card{ background:var(--card); border:1px solid var(--border); border-radius:1rem; padding:1.1rem; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:.6rem }
+    .card h3{ margin:.2rem 0; font-size:1.1rem }
+    .chip{ display:inline-flex; align-items:center; gap:.35rem; border:1px solid var(--border); padding:.25rem .55rem; border-radius:999px; font-size:.82rem; color:var(--muted) }
+    .row{ display:flex; gap:.5rem; flex-wrap:wrap }
+    .about{ background: linear-gradient(180deg, color-mix(in oklab, var(--card) 60%, transparent), transparent) }
+    .skills{ display:flex; flex-wrap:wrap; gap:.5rem }
+    footer{ border-top:1px solid var(--border); padding:2rem 0; color:var(--muted); font-size:.95rem }
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0 }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container nav" aria-label="Primary">
+      <a class="brand" href="#home">Your Name</a>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn secondary" href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero" aria-labelledby="intro-title">
+      <h1 id="intro-title">Hi, I’m Your Name — a <span class="sr-only">role:</span> Software Developer</h1>
+      <p>I build fast, accessible web apps with HTML, CSS, and JavaScript. I enjoy clean UI, thoughtful UX, and turning ideas into working products.</p>
+      <div class="cta">
+        <a class="btn" href="#projects">See Projects</a>
+        <a class="btn secondary" href="resume.pdf" download>Download CV</a>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 class="section-title" id="projects-title">Featured Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Project One</h3>
+          <p>A concise one-liner explaining what it does and why it’s interesting.</p>
+          <div class="row">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span>
+          </div>
+          <div class="row">
+            <a class="btn" href="https://yourusername.github.io/project-one/" target="_blank" rel="noopener">Live Demo</a>
+            <a class="btn secondary" href="https://github.com/yourusername/project-one" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Project Two</h3>
+          <p>Highlight a problem it solves, or a technology you explored.</p>
+          <div class="row">
+            <span class="chip">React</span><span class="chip">API</span>
+          </div>
+          <div class="row">
+            <a class="btn" href="#" target="_blank" rel="noopener">Live Demo</a>
+            <a class="btn secondary" href="#" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Project Three</h3>
+          <p>Another short summary line that’s easy to scan.</p>
+          <div class="row">
+            <span class="chip">Python</span><span class="chip">Flask</span>
+          </div>
+          <div class="row">
+            <a class="btn" href="#" target="_blank" rel="noopener">Live Demo</a>
+            <a class="btn secondary" href="#" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about" aria-labelledby="about-title">
+      <h2 class="section-title" id="about-title">About</h2>
+      <p>I’m a developer who loves building things for the web. I care about performance, accessibility, and maintainable code. I’m currently exploring <strong>TypeScript</strong> and <strong>Web Components</strong>.</p>
+      <p>Previously, I’ve worked on small startups and open-source projects. When I’m not coding, you’ll find me reading, sketching UI ideas, or hiking.</p>
+      <div class="skills" aria-label="Skills">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">React</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">Git</span>
+        <span class="chip">Accessibility</span>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 class="section-title" id="contact-title">Contact</h2>
+      <p>Want to collaborate or just say hi? Email me:</p>
+      <p>
+        <a class="btn" href="mailto:you@example.com">you@example.com</a>
+        <a class="btn secondary" href="https://www.linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Your Name. Built with plain HTML &amp; CSS. Hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Optional: JSON-LD for a person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Your Name",
+    "url": "https://yourusername.github.io/",
+    "sameAs": [
+      "https://github.com/yourusername",
+      "https://www.linkedin.com/in/yourhandle"
+    ],
+    "jobTitle": "Software Developer"
+  }
+  </script>
+</body>
+</html>
+
